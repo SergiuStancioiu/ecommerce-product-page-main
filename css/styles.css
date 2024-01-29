@@ -1,0 +1,173 @@
+:root {
+  --white: #fff;
+  --tangerine: #ff7e1b;
+  --charcoal: #1d2026;
+  --steel-blue: #69707d;
+  --pale-peach: #ffeee2;
+  --silver-blue: #b6bcc8;
+}
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  line-height: normal;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px 24px;
+}
+
+.hamburger-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamburger,
+.logo,
+.cart,
+.arrow-left,
+.arrow-right,
+.minus,
+.plus {
+  cursor: pointer;
+}
+
+.cart-profile-image-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 130px;
+  left: 16px;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 130px;
+  right: 16px;
+}
+
+.product-info p,
+h1 {
+  margin: 0;
+}
+
+.product-info-price-wrapper .product-name {
+  color: var(--tangerine);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.846px;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+
+.product-info-price-wrapper {
+  padding: 24px;
+}
+
+.product-info-price-wrapper .product-title {
+  color: var(--charcoal);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+.product-info-price-wrapper .product-description {
+  color: var(--steel-blue);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 28px;
+}
+
+.product-price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.price-discount-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.price {
+  color: var(--charcoal);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.discount {
+  color: var(--tangerine);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 7px 8px 4px 8px;
+  border-radius: 6px;
+  background: var(--pale-peach);
+}
+
+.product-old-price {
+  color: var(--silver-blue);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration-line: line-through;
+}
+
+.product-qty-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-qty-wrapper {
+  border-radius: 10px;
+  background: #f6f8fd;
+  padding: 22px 24px 18px 24px;
+}
+
+.add-to-cart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 19px 104px;
+  border-radius: 10px;
+  background: var(--tangerine);
+  box-shadow: 0px 20px 50px -20px var(--tangerine);
+}
+
+.add-to-cart button {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+}
