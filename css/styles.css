@@ -1,10 +1,13 @@
 :root {
   --white: #fff;
+  --black: #000;
+  --transparent-black: #000000d4;
   --tangerine: #ff7e1b;
   --charcoal: #1d2026;
   --steel-blue: #69707d;
   --pale-peach: #ffeee2;
   --silver-blue: #b6bcc8;
+  --light-grayish-blue: #f6f8fd;
 }
 
 body {
@@ -22,6 +25,11 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: var(--charcoal);
 }
 
 .nav-bar {
@@ -152,7 +160,7 @@ h1 {
 
 .product-qty-wrapper {
   border-radius: 10px;
-  background: #f6f8fd;
+  background: var(--light-grayish-blue);
   padding: 22px 24px 18px 24px;
 }
 
@@ -170,4 +178,44 @@ h1 {
   color: var(--white);
   font-size: 16px;
   font-weight: 700;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--charcoal);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.main-container {
+  position: relative;
+}
+
+.mobile-menu {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: var(--transparent-black);
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.mobile-wrapper {
+  padding: 25px;
+  width: 60%;
+  height: 100vh;
+  z-index: 2;
+  background-color: var(--white);
+}
+
+.close-menu {
+  padding-bottom: 54px;
 }

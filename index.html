@@ -22,13 +22,13 @@
   </head>
   <body>
     <main>
-      <section class="mobile-header">
+      <section class="main-container">
         <!--Navbar-->
         <div class="nav-bar">
           <div class="hamburger-logo-wrapper">
-            <div class="hamburger">
+            <button class="hamburger">
               <img src="./images/hamburger.png" alt="Hamburger Icon" />
-            </div>
+            </button>
             <div class="logo">
               <img src="./images/sneakers.png" alt="Sneakers Logo" />
             </div>
@@ -39,6 +39,21 @@
             </div>
             <div class="profile-image">
               <img src="./images/profile-picture.png" alt="Profile Image" />
+            </div>
+          </div>
+        </div>
+        <!--Mobile menu-->
+        <div class="mobile-menu hidden">
+          <div class="mobile-wrapper">
+            <button class="close-menu">
+              <img src="./images/icon-close.svg" alt="Close Icon" />
+            </button>
+            <div class="menu-buttons">
+              <a href="#" class="btn">Collections</a>
+              <a href="#" class="btn">Men</a>
+              <a href="#" class="btn">Women</a>
+              <a href="#" class="btn">About</a>
+              <a href="#" class="btn">Contact</a>
             </div>
           </div>
         </div>
@@ -89,5 +104,6 @@
         </div>
       </section>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
