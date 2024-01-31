@@ -6,6 +6,8 @@ const cartContainer = document.querySelector(".cart-wrapper");
 
 hamburger.addEventListener("click", toggleMobileMenu);
 closeMenu.addEventListener("click", toggleMobileMenu);
+mobileMenu.addEventListener("click", toggleMobileMenu);
+
 cart.addEventListener("click", toggleCart);
 
 function toggleMobileMenu() {
