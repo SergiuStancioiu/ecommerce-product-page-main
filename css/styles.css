@@ -169,16 +169,15 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  padding: 19px 104px;
+  width: 100%;
+  height: 56px;
   border-radius: 10px;
   background: var(--tangerine);
   box-shadow: 0px 20px 50px -20px var(--tangerine);
-}
-
-.add-to-cart button {
   color: var(--white);
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .menu-buttons {
@@ -248,8 +247,9 @@ h1 {
   font-weight: 700;
   line-height: 26px;
   text-align: center;
-  padding-top: 77px;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {
@@ -280,7 +280,11 @@ h1 {
 }
 
 .cart-content {
-  padding: 24px;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .prod-checkout-btn {
@@ -310,7 +314,8 @@ h1 {
 }
 
 .delete-prod {
-  width: 14px;
+  width: 20px;
+  cursor: pointer;
 }
 
 .delete-prod img {
@@ -341,4 +346,9 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.product-cart-wrapper {
+  margin-top: 20px;
+  width: 90%;
 }
