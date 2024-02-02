@@ -22,6 +22,22 @@
   </head>
   <body>
     <main>
+      <!--Mobile menu-->
+      <div class="mobile-menu">
+        <div class="overlay"></div>
+        <div class="mobile-wrapper">
+          <button class="close-menu">
+            <img src="./images/icon-close.svg" alt="Close Icon" />
+          </button>
+          <div class="menu-buttons">
+            <a href="#" class="btn">Collections</a>
+            <a href="#" class="btn">Men</a>
+            <a href="#" class="btn">Women</a>
+            <a href="#" class="btn">About</a>
+            <a href="#" class="btn">Contact</a>
+          </div>
+        </div>
+      </div>
       <section class="main-container">
         <!--Navbar-->
         <div class="nav-bar">
@@ -42,21 +58,7 @@
             </div>
           </div>
         </div>
-        <!--Mobile menu-->
-        <div class="mobile-menu">
-          <div class="mobile-wrapper">
-            <button class="close-menu">
-              <img src="./images/icon-close.svg" alt="Close Icon" />
-            </button>
-            <div class="menu-buttons">
-              <a href="#" class="btn">Collections</a>
-              <a href="#" class="btn">Men</a>
-              <a href="#" class="btn">Women</a>
-              <a href="#" class="btn">About</a>
-              <a href="#" class="btn">Contact</a>
-            </div>
-          </div>
-        </div>
+
         <!--Cart-->
         <div class="cart-wrapper hidden">
           <div class="cart-title">Cart</div>
@@ -73,8 +75,7 @@
                 <div class="product-info-wrapper">
                   <div class="prod-title">Fall Limited Edition Sneakers</div>
                   <div class="product-price-qty-total-wrapper">
-                    <div>$<span class="prod-price">125.00</span></div>
-                    <div>x</div>
+                    <div>$<span class="prod-price">125.00</span> x</div>
                     <div class="prod-qty">0</div>
                     <div class="prod-total-price">$375.00</div>
                   </div>
@@ -96,7 +97,26 @@
         <!--Hero Wrapper-->
         <div class="hero-wrapper">
           <div class="hero-image">
-            <img src="./images/hero-mobile.png" alt="Shoe Image" />
+            <img
+              class="slider-image"
+              src="./images/image-product-1.jpg"
+              alt="Shoe Image"
+            />
+            <img
+              class="slider-image"
+              src="./images/himage-product-2.jpg"
+              alt="Shoe Image"
+            />
+            <img
+              class="slider-image"
+              src="./images/image-product-3.jpg"
+              alt="Shoe Image"
+            />
+            <img
+              class="slider-image"
+              src="./images/image-product-4.jpg"
+              alt="Shoe Image"
+            />
           </div>
           <div class="arrow-left">
             <img src="./images/arrow-left.png" alt="Arrow Left" />
