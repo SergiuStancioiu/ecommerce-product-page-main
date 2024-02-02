@@ -23,8 +23,8 @@ minusBtn.addEventListener("click", decrementQty);
 addToCartBtn.addEventListener("click", addProductsToCart);
 deleteProdFromCart.addEventListener("click", deleteProduct);
 
-sliderRightBtn.addEventListener("click", sliderImage);
-sliderLeftBtn.addEventListener("click", sliderImage);
+sliderRightBtn.addEventListener("click", showSlides);
+sliderLeftBtn.addEventListener("click", showSlides);
 
 function toggleMobileMenu() {
   mobileMenu.classList.toggle("active");
@@ -110,26 +110,18 @@ function deleteProduct() {
   noProductsInCart.classList.remove("hidden");
 }
 
-function sliderImage() {
-  const sliderImg = document.querySelector(".slider-image");
+let slideIndex = 0;
+showSlides();
 
-  // const imageArray = [
-  //   { id: 0, srcImage: "image-product-1.jpg", active: true },
-  //   { id: 1, srcImage: "image-product-2.jpg", active: false },
-  //   { id: 2, srcImage: "image-product-3.jpg", active: false },
-  //   { id: 3, srcImage: "image-product-4.jpg", active: false },
-  // ];
-
-  // let imgSrc = "";
-  // imageArray.forEach((image) => {
-  //   console.log(image);
-
-  //   imgSrc = image.srcImage;
-  // });
-
-  // console.log(imgSrc);
-
-  const currentImage = sliderImg.nextElementSibling.innerHTML;
-
-  console.log(currentImage);
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slider-image");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
 }
