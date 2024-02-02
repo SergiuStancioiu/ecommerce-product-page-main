@@ -13,20 +13,18 @@ const addToCartBtn = document.querySelector(".add-to-cart-wrapper");
 const cartProductNumber = document.querySelector(".cart-product-number");
 const deleteProdFromCart = document.querySelector(".delete-prod");
 const noProductsInCart = document.querySelector(".no-products");
-const cartContent = document.querySelector(".cart-content");
 const productCartWrapper = document.querySelector(".product-cart-wrapper");
+const productPrice = document.querySelector(".prod-price");
 
 hamburger.addEventListener("click", toggleMobileMenu);
 closeMenu.addEventListener("click", toggleMobileMenu);
+
 cart.addEventListener("click", toggleCart);
 
 plusBtn.addEventListener("click", incrementQty);
 minusBtn.addEventListener("click", decrementQty);
 addToCartBtn.addEventListener("click", addProductsToCart);
 deleteProdFromCart.addEventListener("click", deleteProduct);
-
-let qtyNumber = 0;
-let productPrice = 125;
 
 function toggleMobileMenu() {
   mobileMenu.classList.toggle("active");
@@ -37,6 +35,8 @@ function toggleCart() {
 }
 
 function incrementQty() {
+  let qtyNumber = parseInt(qty.textContent);
+
   if (qtyNumber >= 0) {
     qtyNumber = qtyNumber + 1;
   }
@@ -45,6 +45,8 @@ function incrementQty() {
 }
 
 function decrementQty() {
+  let qtyNumber = parseInt(qty.textContent);
+
   if (qtyNumber > 0) {
     qtyNumber = qtyNumber - 1;
   }
@@ -52,13 +54,15 @@ function decrementQty() {
   qty.textContent = qtyNumber;
 }
 
-if (qtyNumber === 0) {
+if (parseInt(qty.textContent) === 0) {
   cartProductNumber.classList.add("hidden");
 }
 
 function addProductsToCart() {
+  let qtyNumber = parseInt(qty.textContent);
+
   if (qtyNumber > 0) {
-    let totalPrice = productPrice * qtyNumber;
+    let totalPrice = productPrice.textContent * qtyNumber;
     productsTotalPrice.textContent = "$" + totalPrice.toFixed(2);
 
     productNumber.textContent = qtyNumber;
@@ -75,7 +79,10 @@ function addProductsToCart() {
 }
 
 function deleteProduct() {
-  cartContent.classList.remove("product-cart-wrapper");
-  noProductsInCart.classList.add("hidden");
-  console.log("am apasat pe delete");
+  qty.textContent = 0;
+
+  productCartWrapper.classList.add("hidden");
+  cartProductNumber.classList.add("hidden");
+
+  noProductsInCart.classList.remove("hidden");
 }

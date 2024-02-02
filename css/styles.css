@@ -16,6 +16,7 @@ body {
   font-family: "Kumbh Sans";
   font-style: normal;
   line-height: normal;
+  height: 100vh;
 }
 
 button {
@@ -202,6 +203,7 @@ h1 {
   z-index: 4;
   background-color: var(--transparent-black);
   display: none;
+  height: 100%;
 }
 
 .active {
@@ -211,13 +213,21 @@ h1 {
 .mobile-wrapper {
   padding: 25px;
   width: 60%;
-  height: 100vh;
+  height: 100%;
   z-index: 4;
   background-color: var(--white);
+  position: absolute;
 }
 
 .close-menu {
   padding-bottom: 54px;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.close-menu img {
+  width: 100%;
 }
 
 .cart-wrapper {
