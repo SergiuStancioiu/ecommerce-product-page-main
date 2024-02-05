@@ -7,8 +7,6 @@ const plusBtn = document.querySelector(".plus");
 const addToCartBtn = document.querySelector(".add-to-cart-wrapper");
 const deleteProdFromCart = document.querySelector(".delete-prod");
 const overlay = document.querySelector(".overlay");
-const sliderRightBtn = document.querySelector(".arrow-right");
-const sliderLeftBtn = document.querySelector(".arrow-left");
 
 document.addEventListener("DOMContentLoaded", checkCartQtyIsZero);
 
@@ -22,9 +20,6 @@ plusBtn.addEventListener("click", incrementQty);
 minusBtn.addEventListener("click", decrementQty);
 addToCartBtn.addEventListener("click", addProductsToCart);
 deleteProdFromCart.addEventListener("click", deleteProduct);
-
-sliderRightBtn.addEventListener("click", showSlides);
-sliderLeftBtn.addEventListener("click", showSlides);
 
 function toggleMobileMenu() {
   mobileMenu.classList.toggle("active");
@@ -108,20 +103,4 @@ function deleteProduct() {
   cartProductNumber.classList.add("hidden");
 
   noProductsInCart.classList.remove("hidden");
-}
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slider-image");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
 }
